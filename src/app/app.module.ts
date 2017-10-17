@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { FileService } from './scripts/fileService';
+import { PhotoUploader } from './scripts/photoUploader';
+import { PhotoService } from './scripts/photoService';
 
 import { FileUploadModule } from 'ng2-file-upload';
 import {CloudinaryModule, CloudinaryConfiguration, provideCloudinary} from '@cloudinary/angular-4.x';
 import * as cloudinary from 'cloudinary-core';
 import cloudinaryConfiguration from './scripts/cloudinaryConfig';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import cloudinaryConfiguration from './scripts/cloudinaryConfig';
     FileUploadModule,
     CloudinaryModule.forRoot(cloudinary, cloudinaryConfiguration),
   ],
-  providers: [FileService],
+  providers: [PhotoUploader, PhotoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
