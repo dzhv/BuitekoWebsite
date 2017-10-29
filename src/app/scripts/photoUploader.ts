@@ -8,8 +8,8 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class PhotoUploader {
 
-  private photoTitle: string;
-  private uploader: FileUploader;
+  public photoTitle: string;
+  public uploader: FileUploader;
   
 	constructor(
     private http: Http,

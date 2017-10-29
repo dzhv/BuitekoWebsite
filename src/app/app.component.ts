@@ -16,9 +16,9 @@ import { Photo } from './scripts/photo';
 })
 
 export class AppComponent implements OnInit {
-    private title: string; 
-    private subtitle: string;
-    private photos: Observable<Photo[]>;
+    public title: string; 
+    public subtitle: string;
+    public photos: Observable<Photo[]>;
 //    private uploader: FileUploader;
 
     constructor(
@@ -26,14 +26,14 @@ export class AppComponent implements OnInit {
     private zone: NgZone,
     private http: Http,
     private photoService: PhotoService,
-    private photoUploader: PhotoUploader
+    public photoUploader: PhotoUploader
     ) { 
         this.title = 'Jidrėni-fėni';
         this.subtitle = 'Hellooo-ooo';        
     }
     
     ngOnInit(): void {
-
+        document.body.style.backgroundImage = "url('assets/images/akvariumas.JPG')";
     }
 
     getPhotos = () => {
