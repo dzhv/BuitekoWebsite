@@ -5,14 +5,14 @@ import 'rxjs/add/operator/toPromise';
 import { Cloudinary } from '@cloudinary/angular-4.x';
 import { Observable } from 'rxjs/Rx';
 
-import { PhotoUploader } from './scripts/photoUploader';
-import { PhotoService } from './scripts/photoService';
-import { Photo } from './scripts/photo';
+import { PhotoUploader } from '../scripts/photoUploader';
+import { PhotoService } from '../scripts/photoService';
+import { Photo } from '../scripts/photo';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './templates/app.component.html',
-  styleUrls: ['./styles/app.component.css']
+  templateUrl: '../templates/app.component.html',
+  styleUrls: ['../styles/app.component.css']
 })
 
 export class AppComponent implements OnInit {

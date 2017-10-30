@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './components/app.component';
+import { CategoriesComponent } from './components/categories.component';
+
 import { PhotoUploader } from './scripts/photoUploader';
 import { PhotoService } from './scripts/photoService';
 
@@ -12,17 +14,25 @@ import {CloudinaryModule, CloudinaryConfiguration, provideCloudinary} from '@clo
 import * as cloudinary from 'cloudinary-core';
 import cloudinaryConfiguration from './scripts/cloudinaryConfig';
 
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'galerija/kategorijos', component: CategoriesComponent }  
+];
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CategoriesComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
     BrowserModule,
     FormsModule,
     HttpModule,
     FileUploadModule,
-    CloudinaryModule.forRoot(cloudinary, cloudinaryConfiguration),
+    CloudinaryModule.forRoot(cloudinary, cloudinaryConfiguration)
   ],
   providers: [PhotoUploader, PhotoService],
   bootstrap: [AppComponent]
