@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
     }
     
     ngOnInit(): void {
-        document.body.style.backgroundImage = "url('assets/images/akvariumas.JPG')";
+        
     }
 
     getPhotos = () => {

@@ -16,6 +16,6 @@ export class CategoriesComponent implements OnInit {
     }
     
     ngOnInit(): void {
-        document.body.style.backgroundImage = "url('assets/images/tp.png')";
+        document.body.style.backgroundImage = "url('assets/images/akvariumas.JPG')";
     }
 }

@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: cormorant;
+    src: url('assets/fonts/CormorantGaramond-Medium.ttf');
+}
+
+
+/*.background {	
+	background-image: url('assets/images/gray_green_bg.jpg');
+}*/
+
+
+html {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+}	
+
+
+
+

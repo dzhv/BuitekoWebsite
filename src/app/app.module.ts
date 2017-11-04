@@ -5,6 +5,7 @@ import { HttpModule }    from '@angular/http';
 
 import { AppComponent } from './components/app.component';
 import { CategoriesComponent } from './components/categories.component';
+import { HomeComponent } from './components/home.component';
 
 import { PhotoUploader } from './scripts/photoUploader';
 import { PhotoService } from './scripts/photoService';
@@ -17,17 +18,19 @@ import cloudinaryConfiguration from './scripts/cloudinaryConfig';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: 'galerija/kategorijos', component: CategoriesComponent }  
+  { path: 'kategorijos', component: CategoriesComponent },
+  { path: '', component: HomeComponent },
 ];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    HomeComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    RouterModule.forRoot(appRoutes),
     BrowserModule,
     FormsModule,
     HttpModule,

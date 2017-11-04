@@ -1,0 +1,64 @@
+.text-block{
+	text-align: left;
+}
+
+.text{
+	color: #0000FF;
+	font-family: cormorant;
+	font-size: 11pt;
+}
+
+.background {
+	background-image: url('../../assets/images/gray_green_bg.jpg');
+	background-size: cover;
+}
+
+img.home-image {
+	height: 100vh;	
+	background-size: cover;
+	display: block;
+	margin: 0 auto;
+}
+
+.relative-box {
+	position: relative;
+}
+
+.gallery-button {
+	position: absolute;
+	width: 225px;
+	height: 100px;
+
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+
+
+/*div {
+    text-align: center;
+    color: #ff0012;
+}
+
+table.home {
+	width: 100%;
+	table-layout:fixed;
+
+	padding-top: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+table.home td { 
+	overflow: hidden;  
+}
+
+.container {
+	/*padding-top: 50px;
+	padding-right: 50px;
+	padding-left: 40px;
+}*/
