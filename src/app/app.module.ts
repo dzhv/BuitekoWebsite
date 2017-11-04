@@ -6,6 +6,7 @@ import { HttpModule }    from '@angular/http';
 import { AppComponent } from './components/app.component';
 import { CategoriesComponent } from './components/categories.component';
 import { HomeComponent } from './components/home.component';
+import { GalleryComponent } from './components/gallery.component';
 
 import { PhotoUploader } from './scripts/photoUploader';
 import { PhotoService } from './scripts/photoService';
@@ -19,6 +20,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: 'kategorijos', component: CategoriesComponent },
+  { path: 'kategorijos/:categoryId', component: GalleryComponent },
   { path: '', component: HomeComponent },
 ];
 
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     CategoriesComponent,
-    HomeComponent
+    HomeComponent,
+    GalleryComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

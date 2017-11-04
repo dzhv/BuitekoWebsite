@@ -4,7 +4,7 @@ import { Component, OnInit, Input, NgZone } from '@angular/core';
 @Component({
 	selector: 'app-root',
 	templateUrl: '../templates/categories.html',
-  	styleUrls: ['../styles/categories.css']
+  	styleUrls: ['../styles/categories.css', '../styles/bootstrap/css/bootstrap.css' ]
 })
 
 export class CategoriesComponent implements OnInit {
@@ -12,10 +12,11 @@ export class CategoriesComponent implements OnInit {
 
     constructor(
     ) { 
-        this.title = 'Kategorijos, seni';              
+        this.title = '';              
     }
     
     ngOnInit(): void {
-        document.body.style.backgroundImage = "url('assets/images/akvariumas.JPG')";
+        document.body.classList.remove('gallery-bg');   // hooray for hacks
+        document.body.classList.add('category-bg');
     }
 }

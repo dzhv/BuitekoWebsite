@@ -10,13 +10,15 @@ export class PhotoUploader {
 
   public photoTitle: string;
   public uploader: FileUploader;
+  private albumTitle: string;
   
 	constructor(
     private http: Http,
-    private cloudinary: Cloudinary    
+    private cloudinary: Cloudinary
   ) {
     this.photoTitle = '';
     this.init();
+    this.albumTitle = '';
   }
 
   init = () => {
@@ -40,24 +42,28 @@ export class PhotoUploader {
     this.uploader = new FileUploader(uploaderOptions);
 
     this.uploader.onBuildItemForm = (fileItem: any, form: FormData): any => {
-      // Add Cloudinary's unsigned upload preset to the upload form
-      form.append('upload_preset', this.cloudinary.config().upload_preset);
-      // Add built-in and custom tags for displaying the uploaded photo in the list
-      let tags = 'myphotoalbum';
-      if (this.photoTitle) {
+        // Add Cloudinary's unsigned upload preset to the upload form
+        form.append('upload_preset', this.cloudinary.config().upload_preset);
+        // Add built-in and custom tags for displaying the uploaded photo in the list
+        let tags = this.albumTitle;
+        if (this.photoTitle) {
         form.append('context', `photo=${this.photoTitle}`);
-        tags = `myphotoalbum,${this.photoTitle}`;
-      }
-      form.append('tags', tags);
-      form.append('file', fileItem);
+        tags = `${this.albumTitle},${this.photoTitle}`;
+        }
+        form.append('tags', tags);
+        form.append('file', fileItem);
 
-      // Use default "withCredentials" value for CORS requests
-      fileItem.withCredentials = false;
-      return { fileItem, form };
+        // Use default "withCredentials" value for CORS requests
+        fileItem.withCredentials = false;
+        return { fileItem, form };
     };
   }
 
     updateTitle(value: string) {
-      this.photoTitle = value;
+        this.photoTitle = value;
+    }
+
+    setAlbum = (albumTitle: string) => {
+        this.albumTitle = albumTitle;
     }
 }

@@ -1,0 +1,17 @@
+.photo {
+	margin-bottom: 50px;
+}
+
+.container.gallery-container{
+	padding-top: 50px;
+}
+
+.upload-img{
+	width: 200px;
+	height: 150px;
+	cursor: pointer;
+}
+
+.upload-button{
+	margin-bottom: 50px;
+}

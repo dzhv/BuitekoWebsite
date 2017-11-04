@@ -9,8 +9,7 @@
 }
 
 .background {
-	background-image: url('../../assets/images/gray_green_bg.jpg');
-	background-size: cover;
+	background-color: #9CFF00;
 }
 
 img.home-image {

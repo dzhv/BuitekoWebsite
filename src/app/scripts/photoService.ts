@@ -7,16 +7,19 @@ import {Cloudinary} from '@cloudinary/angular-4.x';
 
 @Injectable()
 export class PhotoService {
+    private albumTitle: string;
 
     constructor(
         private http: Http, 
         private cloudinary: Cloudinary
-    ) { }
+    ) { 
+        this.albumTitle = '';
+    }
 
     getPhotos(): Observable<Photo[]> {
         // instead of maintaining the list of images, we rely on the 'myphotoalbum' tag
         // and simply retrieve a list of all images with that tag.        
-        let url = this.cloudinary.url('myphotoalbum', {
+        let url = this.cloudinary.url(this.albumTitle, {
             format: 'json',
             type: 'list',
             // cache bust (lists are cached by the CDN for 1 minute)
@@ -30,5 +33,9 @@ export class PhotoService {
         return this.http
             .get(url)
             .map((r: Response) => r.json().resources as Photo[]);
-    }    
+    }  
+
+    setAlbum = (albumTitle: string) => {
+        this.albumTitle = albumTitle;
+    }  
 }
