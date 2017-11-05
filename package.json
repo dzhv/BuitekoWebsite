@@ -24,6 +24,7 @@
     "@cloudinary/angular-4.x": "^1.0.0",
     "cloudinary-core": "^2.3.0",
     "core-js": "^2.4.1",
+    "popper.js": "^1.12.6",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"
   },

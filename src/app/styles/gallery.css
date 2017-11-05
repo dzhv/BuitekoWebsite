@@ -24,3 +24,17 @@
 	margin-bottom: 50px;
 }
 
+.modal-dialog.photo-dialog {
+	max-width: 800px;
+	text-align: center;
+}
+
+.modal-content.photo-dialog-content{
+	background-color: transparent;
+	border: none;
+}
+
+.modal-body.photo-dialog-body {
+	padding: 0;
+}
+
