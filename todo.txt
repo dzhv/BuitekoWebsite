@@ -1,0 +1,12 @@
+TODO:
+
+1. Sutaisyt Galerija button vietą  // gal ir nereikia
+2. Sudėt tikras kategorijas su nuotraukom    
+3. Upload buttoną įkelt
+4. Kategorijos turėtų savo atskirus albumus   // done
+5. Draginami objektai homepage
+6. Geresnis Gallery nuotraukų atvaizdavimas
+7. Uždėt favicon
+8. Navigacija // ?
+9. Upload loaderis ar kažkas panašaus
+10. Visada tik 2 kategorijos ekrane

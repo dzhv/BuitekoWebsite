@@ -1,5 +1,5 @@
+/// <reference path="../scripts/libs/jquery.d.ts" />
 import { Component, OnInit, Input, NgZone } from '@angular/core';
-
 
 @Component({
 	selector: 'app-root',
@@ -18,5 +18,9 @@ export class CategoriesComponent implements OnInit {
     ngOnInit(): void {
         document.body.classList.remove('gallery-bg');   // hooray for hacks
         document.body.classList.add('category-bg');
+
+        $(document).ready(function() {
+            (<any>$('#fullpage')).fullpage();
+        });
     }
 }

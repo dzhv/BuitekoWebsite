@@ -28,7 +28,7 @@ export class GalleryComponent implements OnInit {
     }
     
     ngOnInit(): void {
-        document.body.classList.remove('category-bg');
+        document.body.classList.remove('category-bg');    // isn't this something, right?
         document.body.classList.add('gallery-bg');
 
         this.route.params.subscribe(params => {
