@@ -1,5 +1,13 @@
 .photo {
 	margin-bottom: 50px;
+	/*height: 400px;*/
+	width: 225px;
+	overflow: hidden;
+}
+
+.photo-img{
+	/*width: 200px;*/
+ 	height: 350px;
 }
 
 .container.gallery-container{
@@ -7,11 +15,12 @@
 }
 
 .upload-img{
-	width: 200px;
-	height: 150px;
+	width: 225px;
+	height: 350px;
 	cursor: pointer;
 }
 
 .upload-button{
 	margin-bottom: 50px;
 }
+
