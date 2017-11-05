@@ -36,6 +36,40 @@ img.home-image {
     outline:none;
 }
 
+aside { 
+    position:  absolute;
+    left: 0;
+    top: 0; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+aside:active { 
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+#zvake{
+	left: 31.5vw;
+	top: 40vh;
+}
+
+#zvaigzde{
+	left: 700px;
+	top: 150px;
+}
+
+#geles{
+	left: 1200px;
+	top: 100px;
+}
+
+
+
+
 
 
 /*div {
