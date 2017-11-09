@@ -32,7 +32,23 @@ body {
 }
 
 .gallery-bg{
-	background-color: #9CFF00;
+	background-image: url('assets/images/gallery_bg.jpg');	
+	
+	min-height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left top;
+	background-size: auto;
+}
+
+.back-button {
+	position: absolute;
+	top: 33px;
+	left: 30px;
+}
+
+.back-button-img {
+	width: 82px;
 }
 
 

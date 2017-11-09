@@ -53,18 +53,26 @@ aside:active {
 }
 
 #zvake{
-	left: 31.5vw;
-	top: 40vh;
+	left: 32vw;
+	top: 38vh;
 }
 
 #zvaigzde{
-	left: 700px;
-	top: 150px;
+	left: 37vw;
+	top: 6vh;	
+}
+
+#zvaigzde-img{
+	height: 89vh;
 }
 
 #geles{
-	left: 1200px;
-	top: 100px;
+	left: 55vw;
+	top: 20vh;	
+}
+
+#geles-img{
+	height: 90vh;
 }
 
 

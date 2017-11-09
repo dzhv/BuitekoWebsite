@@ -38,3 +38,9 @@
 	padding: 0;
 }
 
+#gallery-bg-image{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 600px;
+}

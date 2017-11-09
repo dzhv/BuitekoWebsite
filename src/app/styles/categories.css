@@ -7,11 +7,21 @@ div {
 
 .container.categories {
 	/*padding-top: 125px;*/
-	padding-right: 200px;
-	padding-left: 200px;
+	padding-right: 100px;
+	padding-left: 100px;
 }
 
 .category-img{
-	/*width: 350px;*/
-	/*margin-bottom: 150px;*/
+	height: 62vh;
+	
+}
+
+.category-img-left{
+	float: right;
+	padding-right: 50px;
+}
+
+.category-img-right{
+	float: left;
+	padding-left: 50px;
 }
