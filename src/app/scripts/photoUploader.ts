@@ -11,6 +11,8 @@ export class PhotoUploader {
   public photoTitle: string;
   public uploader: FileUploader;
   private albumTitle: string;
+  public uploadComplete: boolean;
+  private uploadCallback: Function;
   
 	constructor(
     private http: Http,
@@ -19,6 +21,7 @@ export class PhotoUploader {
     this.photoTitle = '';
     this.init();
     this.albumTitle = '';
+    this.uploadComplete = false;
   }
 
   init = () => {
@@ -57,6 +60,16 @@ export class PhotoUploader {
         fileItem.withCredentials = false;
         return { fileItem, form };
     };
+
+    this.uploader.onCompleteItem = (item: any, response: string, status: number, headers: ParsedResponseHeaders) => {
+      this.uploadComplete = true;
+      if (this.uploadCallback){
+        this.uploadCallback();
+      }
+      setTimeout(() => {
+        this.uploadComplete = false;
+      }, 4000);
+    }
   }
 
     updateTitle(value: string) {
@@ -65,5 +78,9 @@ export class PhotoUploader {
 
     setAlbum = (albumTitle: string) => {
         this.albumTitle = albumTitle;
+    }
+
+    setUploadCallback = (callback: Function) => {
+        this.uploadCallback = callback;
     }
 }

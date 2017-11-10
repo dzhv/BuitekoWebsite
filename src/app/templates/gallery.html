@@ -1,5 +1,5 @@
-<div id="home-container" class="img-background">
-    <img id="gallery-bg-image" src="../../assets/images/gallery_bg.jpg"/>
+<div class="img-background">
+    <img id="gallery-bg-image" src="../../assets/images/gallery_bg.png"/>
 </div>
 
 <a routerLink="/kategorijos" class="back-button">
@@ -10,10 +10,11 @@
     <div class="container gallery-container">
         <div class="row">
             <div class="col-md-4  text-center">
-                <label for="fileupload" class="upload-button">
+                <label id="upload-img" for="fileupload" class="upload-button" *ngIf="!photoUploader.uploadComplete;else success_img">
                     <img class="upload-img" src="../../assets/images/IKELIMAS_01.png"/>
                 </label>
-                <!-- onChange hanlder resets the input value to get the change event when uploading the same file consecutively -->
+                <ng-template #success_img><img class="upload-img" src="../../assets/images/IKELIMAS_02.png"/></ng-template>
+                <!-- onChange handler resets the input value to get the change event when uploading the same file consecutively -->
                 <input type="file" id="fileupload" #fileInput ng2FileSelect [style.display]="'none'" 
                 [uploader]="photoUploader.uploader" (change)="fileInput.value=''"
                     multiple />
@@ -27,7 +28,7 @@
                         <cl-image
                                 public-id={{photo.public_id}}
                                 class="photo-img clearfix"
-                                width="203"
+                                width="204"
                                 height="304"
                                 crop="fill"
                                 quality="80"

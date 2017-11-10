@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, NgZone } from '@angular/core';
+import { Component, OnInit, Input, NgZone, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { Observable } from 'rxjs/Rx';
@@ -15,7 +15,7 @@ import { Cloudinary } from '@cloudinary/angular-4.x';
   	styleUrls: ['../styles/gallery.css', '../styles/bootstrap/css/bootstrap.css' ]
 })
 
-export class GalleryComponent implements OnInit {
+export class GalleryComponent implements OnInit, AfterViewInit {
     public title: string;
     public photos: Observable<Photo[]>;
     public modalPhotoUrl: string;    
@@ -29,6 +29,7 @@ export class GalleryComponent implements OnInit {
     ) { 
         this.title = 'Jidrėni-fėni';
         this.modalPhotoUrl = '';
+        this.photoUploader.setUploadCallback(this.getPhotos);
     }
     
     ngOnInit(): void {
@@ -42,7 +43,11 @@ export class GalleryComponent implements OnInit {
             this.photoService.setAlbum(album);
 
             return this.getPhotos();
-        })
+        });
+    }
+
+    ngAfterViewInit(): void {
+        this.configureBgPosition();
     }
 
     getPhotos = () => {
@@ -57,5 +62,16 @@ export class GalleryComponent implements OnInit {
             + `/image/upload/c_fit,h_600,w_800/${photoId}`;
 
         (<any>$('#photoModal')).modal();
+    }
+
+    configureBgPosition = () => {
+        var bgImg = document.getElementById("gallery-bg-image");
+        var uploadImg = document.getElementById("upload-img");
+
+        var uploadImgLeft = uploadImg.getBoundingClientRect().left;
+        var leftPos = uploadImgLeft - 230;
+        leftPos = leftPos < 0 ? 0 : leftPos;
+        bgImg.style.left = leftPos.toString() + "px";
+
     }
 }
