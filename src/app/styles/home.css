@@ -34,6 +34,8 @@ img.home-image {
     cursor:pointer;
     overflow: hidden;
     outline:none;
+
+    z-index: 1000;
 }
 
 aside { 

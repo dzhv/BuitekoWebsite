@@ -2,33 +2,33 @@
     <img id="gallery-bg-image" src="../../assets/images/gallery_bg.jpg"/>
 </div>
 
-<a routerLink="/" class="back-button">
+<a routerLink="/kategorijos" class="back-button">
         <img class="back-button-img" src="../../assets/images/rodykles.png" />
 </a>
-    
-<div class="background">
+
+<div class="background text-center">
     <div class="container gallery-container">
         <div class="row">
-            <div class="col-md-3">
-                <!-- <label for="fileupload" class="upload-button">
-                    <img class="upload-img" src="../../assets/images/arrow_up.jpg"/>
-                </label> -->
+            <div class="col-md-4  text-center">
+                <label for="fileupload" class="upload-button">
+                    <img class="upload-img" src="../../assets/images/IKELIMAS_01.png"/>
+                </label>
                 <!-- onChange hanlder resets the input value to get the change event when uploading the same file consecutively -->
                 <input type="file" id="fileupload" #fileInput ng2FileSelect [style.display]="'none'" 
                 [uploader]="photoUploader.uploader" (change)="fileInput.value=''"
                     multiple />
             </div>
 
-            <div class="col-md-3" *ngFor="let photo of photos | async">
-                <div class="photo">
+            <div class="col-md-4 text-center" *ngFor="let photo of photos | async">
+                <div class="photo text-center">
                     <!-- <h2 *ngIf="photo.context">{{photo.context.custom.photo}}</h2> -->
-                    <a (click)="openModal(photo.public_id)" format="jpg" target="_blank">
+                    <div (click)="openModal(photo.public_id)" format="jpg" target="_blank">
                         <cl-transformation quality="auto" fetch-format="auto"></cl-transformation>
                         <cl-image
                                 public-id={{photo.public_id}}
-                                class="photo-img"
-                                width="225"
-                                height="350"
+                                class="photo-img clearfix"
+                                width="203"
+                                height="304"
                                 crop="fill"
                                 quality="80"
                                 format="jpg"
@@ -37,7 +37,7 @@
                                 [attr.opacity]="photo.isMouseOver ? '50' : null"
                         >
                         </cl-image>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>

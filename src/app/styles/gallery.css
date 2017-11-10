@@ -1,22 +1,24 @@
 .photo {
 	margin-bottom: 50px;
 	/*height: 400px;*/
-	width: 225px;
+	width: 100%;
 	overflow: hidden;
 }
 
 .photo-img{
 	/*width: 200px;*/
- 	height: 350px;
+ 	height: 304px;
 }
 
 .container.gallery-container{
 	padding-top: 50px;
+	width: 830px;
 }
 
 .upload-img{
-	width: 225px;
-	height: 350px;
+	margin-top: -11px;
+	width: 227px;
+	height: 327px;
 	cursor: pointer;
 }
 
@@ -26,7 +28,10 @@
 
 .modal-dialog.photo-dialog {
 	max-width: 800px;
-	text-align: center;
+/*	text-align: center;*/
+display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .modal-content.photo-dialog-content{
@@ -44,3 +49,21 @@
 	top: 0;
 	height: 600px;
 }
+
+#photoModal{
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  #photoModal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  
+}
+

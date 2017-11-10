@@ -32,13 +32,7 @@ body {
 }
 
 .gallery-bg{
-	background-image: url('assets/images/gallery_bg.jpg');	
-	
-	min-height: 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: left top;
-	background-size: auto;
+	background-color: #9CFF00;
 }
 
 .back-button {
