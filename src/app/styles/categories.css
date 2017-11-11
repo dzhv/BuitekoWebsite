@@ -12,16 +12,46 @@ div {
 }
 
 .category-img{
-	height: 62vh;
-	
+	height: 100%;	
 }
 
-.category-img-left{
-	float: right;
-	padding-right: 50px;
+.category-img:hover{
 }
 
-.category-img-right{
-	float: left;
-	padding-left: 50px;
+.category-img-left{	
+}
+
+.category-img-left:hover {    
+}
+
+.category-img-right{	
+}
+
+.category-wrapper {
+	padding: 10px;
+	height: 65vh;
+	cursor: pointer;
+}
+
+.category-wrapper:hover {
+	padding: 0;	
+}
+
+.category-wrapper-wrapper:hover {	
+}
+
+.category-wrapper-left {
+	float: right;	
+}
+
+.category-wrapper-wrapper-left{
+	padding-right: 40px;
+}
+
+.category-wrapper-right {
+	float: left;	
+}
+
+.category-wrapper-wrapper-right{
+	padding-left: 40px;
 }
