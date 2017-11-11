@@ -67,3 +67,7 @@ display: inline-block;
   
 }
 
+.img-background {
+	pointer-events: none;
+}
+
