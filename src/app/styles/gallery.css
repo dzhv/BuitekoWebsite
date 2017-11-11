@@ -29,9 +29,10 @@
 .modal-dialog.photo-dialog {
 	max-width: 800px;
 /*	text-align: center;*/
-display: inline-block;
-  text-align: left;
-  vertical-align: middle;
+	display: inline-block;
+  	text-align: left;
+  	vertical-align: middle;
+  	margin: 0;
 }
 
 .modal-content.photo-dialog-content{
