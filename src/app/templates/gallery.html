@@ -1,5 +1,5 @@
 <div class="img-background">
-    <img id="gallery-bg-image" src="../../assets/images/gallery_bg.png"/>
+    <img id="gallery-bg-image" src="../../assets/images/gallery_bg.jpg"/>
 </div>
 
 <a routerLink="/kategorijos" class="back-button">
@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-md-4  text-center">
                 <label id="upload-img" for="fileupload" class="upload-button" *ngIf="!photoUploader.uploadComplete;else success_img">
-                    <img class="upload-img" src="../../assets/images/IKELIMAS_01.png"/>
+                    <img class="upload-img" src="../../assets/images/dalintis.png"/>
                 </label>
-                <ng-template #success_img><img class="upload-img" src="../../assets/images/IKELIMAS_02.png"/></ng-template>
+                <ng-template #success_img><img class="upload-img" src="../../assets/images/ikelta.png"/></ng-template>
                 <!-- onChange handler resets the input value to get the change event when uploading the same file consecutively -->
                 <input type="file" id="fileupload" #fileInput ng2FileSelect [style.display]="'none'" 
                 [uploader]="photoUploader.uploader" (change)="fileInput.value=''"

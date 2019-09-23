@@ -4,11 +4,6 @@
 }
 
 
-/*.background {	
-	background-image: url('assets/images/gray_green_bg.jpg');
-}*/
-
-
 html {
     overflow: hidden;
     height: 100%;
@@ -37,12 +32,12 @@ body {
 
 .back-button {
 	position: absolute;
-	top: 49px;
-	left: 30px;
+	top: 32px;
+	left: 42px;
 }
 
 .back-button-img {
-	width: 82px;
+	height: 11.8vh;
 }
 
 

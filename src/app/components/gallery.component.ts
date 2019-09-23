@@ -15,7 +15,7 @@ import { Cloudinary } from '@cloudinary/angular-4.x';
   	styleUrls: ['../styles/gallery.css', '../styles/bootstrap/css/bootstrap.css' ]
 })
 
-export class GalleryComponent implements OnInit, AfterViewInit {
+export class GalleryComponent implements OnInit {
     public title: string;
     public photos: Observable<Photo[]>;
     public modalPhotoUrl: string;    
@@ -46,10 +46,6 @@ export class GalleryComponent implements OnInit, AfterViewInit {
         });
     }
 
-    ngAfterViewInit(): void {
-        this.configureBgPosition();
-    }
-
     getPhotos = () => {
         this.photos = this.photoService.getPhotos();
         return this.photos;
@@ -62,16 +58,5 @@ export class GalleryComponent implements OnInit, AfterViewInit {
             + `/image/upload/c_fit,h_600,w_800/${photoId}`;
 
         (<any>$('#photoModal')).modal();
-    }
-
-    configureBgPosition = () => {
-        var bgImg = document.getElementById("gallery-bg-image");
-        var uploadImg = document.getElementById("upload-img");
-
-        var uploadImgLeft = uploadImg.getBoundingClientRect().left;
-        var leftPos = uploadImgLeft - 230;
-        leftPos = leftPos < 0 ? 0 : leftPos;
-        bgImg.style.left = leftPos.toString() + "px";
-
     }
 }

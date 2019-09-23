@@ -18,11 +18,13 @@ export class GalleryButton {
 
     calculatePosition = () => {        
         var imgWidth = this.homeImage.offsetWidth;
+        var imgHeight = this.homeImage.offsetHeight;
         var containerWidth = this.homeContainer.offsetWidth;
         var margin = (containerWidth - imgWidth) / 2;
 
-        this.button.style.left = (imgWidth * 12.3 / 22 - 10 + margin).toString() + "px";
-        this.button.style.top = "40px";
-        this.button.style.width = (225 * containerWidth / 1900).toString() + "px";
+        this.button.style.left = (imgWidth * 0.45 - 10 + margin).toString() + "px";
+        this.button.style.top = "0px";
+        this.button.style.width = (imgWidth * 0.45).toString() + "px";
+        this.button.style.height = (imgHeight * 0.22).toString() + "px";
     }
 }

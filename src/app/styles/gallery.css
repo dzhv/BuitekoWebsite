@@ -1,12 +1,10 @@
 .photo {
 	margin-bottom: 50px;
-	/*height: 400px;*/
 	width: 100%;
 	overflow: hidden;
 }
 
 .photo-img{
-	/*width: 200px;*/
  	height: 304px;
 }
 
@@ -28,7 +26,6 @@
 
 .modal-dialog.photo-dialog {
 	max-width: 800px;
-/*	text-align: center;*/
 	display: inline-block;
   	text-align: left;
   	vertical-align: middle;
@@ -48,7 +45,7 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	height: 392px;
+	height: 791px;
 }
 
 #photoModal{

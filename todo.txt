@@ -1,12 +1,15 @@
 TODO:
 
 1. Sutaisyt Galerija button vietą  // gal ir nereikia
-2. Sudėt tikras kategorijas su nuotraukom    
-3. Upload buttoną įkelt
+2. Sudėt tikras kategorijas su nuotraukom    // liko 1
+3. Upload buttoną įkelt     // ikeltas
 4. Kategorijos turėtų savo atskirus albumus   // done
-5. Draginami objektai homepage
-6. Geresnis Gallery nuotraukų atvaizdavimas
-7. Uždėt favicon
-8. Navigacija // ?
-9. Upload loaderis ar kažkas panašaus
-10. Visada tik 2 kategorijos ekrane
+5. Draginami objektai homepage   // done
+6. Geresnis Gallery nuotraukų atvaizdavimas  // done
+7. Uždėt favicon     // done
+8. Navigacija // done
+9. Upload loaderis ar kažkas panašaus   // done
+10. Visada tik 2 kategorijos ekrane   // done
+11. kategorijų paveiksliukų dydis     // done
+12. Kategorijos -> On hover biski padidetu image
+13. galerija scrollinimas
